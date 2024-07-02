@@ -4,7 +4,7 @@ package com.oop.ex_class;
  *
  */
 
-public class Ex01_static {
+public class Main {
     // static 필드 = 클래스 필드(변수)
     // - 클래스를 로딩 할 때 Method Area 영역에 생성된다.
     // - 클래스는 단 한번 로딩된다.
@@ -35,8 +35,8 @@ public class Ex01_static {
 
 
         // main을 호출할 때 obj 는 JVM Stack 에 생성되어 있다.
-        Ex01_static obj;
-        obj = new Ex01_static();
+        Main obj;
+        obj = new Main();
 
         System.out.println("a값 출력 : "+ a); // static 은 기본값 0 으로 초기화 되어있다.
         // System.out.println("b값 출력 : "+ b); (에러발생) non-static 은 기본적으로 초기화 되어있지 않다.

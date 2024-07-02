@@ -4,23 +4,7 @@ package com.oop.ex_class;
  *
  */
 
-public class Ex02_static {
-
-    // 성적 데이터를 설계할 클래스
-    static class Score{
-        // 여러 명의 성적 데이터를 저장해야 함으로 인스턴스 변수로 설계
-        String name;
-        int kor;
-        int eng;
-        int math;
-        int sum;
-        float average;
-    }
-
-    static class A{
-
-    }
-
+public class Main2 {
 
     public static void main(String[] args){
 
@@ -43,6 +27,21 @@ public class Ex02_static {
         s2.sum = s2.kor + s2.eng + s2.math;
         s2.average = s2.sum / 3f;
 
-        System.out.printf("이름 : %s");
+        System.out.print("이름 : %s");
+    }
+
+    // 성적 데이터를 설계할 클래스
+    static class Score{
+        // 여러 명의 성적 데이터를 저장해야 함으로 인스턴스 변수로 설계
+        String name;
+        int kor;
+        int eng;
+        int math;
+        int sum;
+        float average;
+    }
+
+    static class A{
+
     }
 }
