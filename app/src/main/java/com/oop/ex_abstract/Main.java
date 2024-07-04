@@ -23,6 +23,7 @@ abstract class Abstract2{
     // 추상 메서드는 구현할 수 없다
     //public abstract void m0(){}; // !! 컴파일 에러
     public abstract void m1();
+
 }
 
 class SubAbstract2 extends Abstract2{
