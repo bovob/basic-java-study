@@ -37,7 +37,7 @@ public class Main {
         // Canvas의 Pen을 변경한다.
         System.out.println("펜을 변경합니다.");
         c1.setTool(pen2);
-        
+
         // 현재 사용중인 펜 확인
         System.out.println("현재 사용중인 펜은 : " + ((MultiPen)c1.getTool()).getModel());
         
