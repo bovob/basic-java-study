@@ -1,55 +1,61 @@
 package com.oop.ex_lambda;
-
-import org.checkerframework.checker.units.qual.C;
-
-interface A{
-    void play();
-}
-
-interface INT{
-    void m1(String A);
+/**
+ *  파라미터가 2개 이상일 때
+ */
+interface Calculator{
+    int plus(int a, int b);
 }
 
 public class Main2 {
 
     public static void main(String[] args) {
-
-        class B implements A{
+        //1)일반
+        class MyCalc implements Calculator{
             @Override
-            public void play() {
-                System.out.println("일반");
+            public int plus(int a, int b) {
+                return a + b;
             }
         }
+        Calculator c1 = new MyCalc();
+        test(c1);
 
-        A p1 = new B();
-        p1.play();
-
-
-        A p2 = new B(){
+        //2)익명
+        Calculator c2 = new Calculator() {
             @Override
-            public void play() {
-                System.out.println("익명");
+            public int plus(int a, int b) {
+                return a + b;
             }
         };
-        p2.play();
+        test(c2);
 
-
-        new B(){
+        //3)익명직접
+        test(new Calculator() {
             @Override
-            public void play() {
-                System.out.println("익명1");
+            public int plus(int a, int b) {
+                return a+b;
             }
-        }.play();
+        });
 
-        A p3 = () -> {System.out.println("람다1");};
-        p3.play();
+        //4)람다
+        Calculator c4 = (int a, int b) -> { return (a+b);};
+        test(c4);
 
-        A p4 = () -> System.out.println("람다2");
-        p4.play();
+        //5)람다생략
+        // 파라미터 타입과 { } 는 제거할 수 있다.
+        // { } 제거시 return 은 필수로 제거해야 한다.
+        Calculator c5 = (a, b)  -> a + b;
+        test(c5);
 
-        //--------------------------------------------
+        //6)람다직접
+        // return 마지막 ; 까먹지 말 것
+        test((int a, int b) -> {return (a + b);});
 
-
+        //7)람다직접생략
+        test((a, b) -> a + b);
     }
 
+
+    static void test (Calculator c){
+        System.out.println(c.plus(100, 200));
+    }
 }
