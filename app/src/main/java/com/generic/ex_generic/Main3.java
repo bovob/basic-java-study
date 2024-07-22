@@ -1,4 +1,4 @@
-package com.oop.ex_generic;
+package com.generic.ex_generic;
 
 /**
  *  Generic(일반화)

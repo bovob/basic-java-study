@@ -1,6 +1,4 @@
-package com.oop.ex_generic;
-
-import org.checkerframework.checker.units.qual.K;
+package com.generic.ex_generic;
 
 /**
  *  Generic(일반화)
