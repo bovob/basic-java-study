@@ -24,7 +24,7 @@ public class Main2 {
         System.out.println("현재 incoding : "+ System.getProperty("file.encoding"));
         System.out.println("저장 문자열 : "+str);
 
-        // CharSet : MS949 , UTF-8 , UTF-16BE , UTF-16LE 
+        // CharSet : MS949 , UTF-8 , UTF-16BE , UTF-16LE
         // 윈도우 MS949 설정
         byte[] bytes = str.getBytes("MS949");
         Line();
