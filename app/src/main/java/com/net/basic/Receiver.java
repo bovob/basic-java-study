@@ -1,4 +1,4 @@
-package com.net;
+package com.net.basic;
 
 import java.io.PrintStream;
 import java.net.ServerSocket;

@@ -1,4 +1,4 @@
-package com.net;
+package com.net.basic;
 
 import java.io.PrintStream;
 import java.net.Socket;
@@ -28,7 +28,7 @@ public class Sender {
         PrintStream out = new PrintStream(socket.getOutputStream());
         Scanner in = new Scanner(socket.getInputStream());
         System.out.println("서버와 데이터를 송수신할 스트림 준비. . .");
-        
+
         // 3) 상대편에서 보낸 문자열을 한 줄 읽는다.
         String str = in.nextLine();
         System.out.printf("서버: %s\n", str);
