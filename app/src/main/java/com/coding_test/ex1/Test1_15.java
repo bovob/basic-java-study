@@ -1,5 +1,7 @@
 package com.coding_test.ex1;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -10,27 +12,29 @@ public class Test1_15 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("문자를 입력하세요> ");
-        String str = scan.nextLine();
-        boolean ox = false;
+        HashMap<Integer, String> strMap = new HashMap<>();
 
-        ox = diffStr(str);
+        while (true){
+            int key = 0 ;
 
-        if (ox){
-            System.out.println("회문이 맞습니다.");
-        } else {
-            System.out.println("회문이 아닙니다.");
-        }
-    }
+            System.out.println("문자를 입력하세요(0 입력시 종료)> ");
+            String str = scan.nextLine();
 
-    private static boolean diffStr(String str) {
-
-        int length = str.length();
-
-        for (int i = 0; i < length/2 ; i++){
-            if(str.charAt(i) != str.charAt(length - i - 1)){
-                return false;
+            if (str.equals("0")){
+                break;
+            } else {
+                strMap.put(key, Arrays.toString(str.split("")));
+                key++;
             }
-        } return true;
+        }
+
+        for (int i = 0 ; i < strMap.size() ; i++){
+            int[] intArray = new int[strMap.size()];
+            intArray[i] = strMap.get(i).length();
+
+            Arrays.stream(intArray).sorted();
+
+
+        }
     }
 }
