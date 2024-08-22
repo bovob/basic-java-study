@@ -1,18 +1,19 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-        String[] dogArray = new String[]{
-            "|\\_/|",
-            "|q p|   /}",
-            "( 0 )\"\"\"\\",
-            "|\"^\"`    |",
-            "||_/=\\\\__|"
-        };
+        int hour = scan.nextInt();
+        int minute = scan.nextInt();
+        int rate = scan.nextInt();
 
-        for (String dog : dogArray){
-            System.out.println(dog);
-        }
+        hour *= 3600;
+        minute *= 60;
+
+
+
     }
 }
 
